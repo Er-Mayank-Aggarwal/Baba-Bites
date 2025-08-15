@@ -446,10 +446,66 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* Quick Menu Navigation */
+        .quick-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .nav-item {
+            color: var(--gold-crayola);
+            background-color: transparent;
+            border: 1px solid var(--gold-crayola);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
+
+        .nav-item:hover,
+        .nav-item:focus {
+            background-color: var(--gold-crayola);
+            color: var(--smoky-black-1);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Responsive Adjustments for Quick Nav */
+        @media (max-width: 768px) {
+            .quick-nav {
+                gap: 1rem;
+            }
+
+            .nav-item {
+                font-size: 1.2rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .quick-nav {
+                gap: 0.8rem;
+            }
+
+            .nav-item {
+                font-size: 1.1rem;
+                padding: 0.6rem 1.2rem;
+            }
+        }
     </style>
 </head>
 
 <body>
+
     <!-- HERO -->
     <section class="parallax-section hero" aria-label="home" id="home">
         <div class="parallax-bg"></div>
@@ -466,133 +522,299 @@
     </section>
 
     <!-- MENU SECTION -->
-<section id="menu">
-    <div class="menu-container">
-        <h2 class="section-subtitle">Our Specialties</h2>
-        <h3 class="display-1" style="color: var(--gold-crayola); margin-bottom: 5rem;">Menu</h3>
-
-        <!-- Beverages -->
-        <div class="menu-category">
-            <h4 class="menu-title">Beverages</h4>
-            <div class="menu-items">
-                <div class="menu-item">
-                    <img src="Menu_images/coffee.jpeg" alt="Coffee" class="item-img">
-                    <h5 class="item-name">Coffee</h5>
-                    <div class="item-price">₹30</div>
+    <section id="menu">
+        <div class="menu-container">
+            <h2 class="section-subtitle">Our Specialties</h2>
+            <h3 class="display-1" style="color: var(--gold-crayola); margin-bottom: 5rem;">Menu</h3>
+            <div class="quick-nav">
+                <a href="#beverages" class="nav-item">Beverages</a>
+                <a href="#shakes" class="nav-item">Shakes</a>
+                <a href="#pizza" class="nav-item">Pizza</a>
+                <a href="#noodles" class="nav-item">Noodles</a>
+                <a href="#maggi" class="nav-item">Maggi</a>
+                <a href="#meals" class="nav-item">Meals</a>
+                <a href="#sandwiches" class="nav-item">Sandwiches</a>
+                <a href="#burgers" class="nav-item">Burgers</a>
+                <a href="#snacks" class="nav-item">Snacks</a>
+            </div>
+            <!-- Beverages -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="beverages">Beverages</h4>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="Menu_images/coffee.jpeg" alt="Coffee" class="item-img">
+                        <h5 class="item-name">Coffee</h5>
+                        <div class="item-price">₹30</div>
+                    </div>
+                    <div class="menu-item">
+                        <img src="Menu_images/tea.jpeg" alt="Tea" class="item-img">
+                        <h5 class="item-name">Tea</h5>
+                        <div class="item-price">₹20 / ₹10</div>
+                    </div>
                 </div>
-                <div class="menu-item">
-                    <img src="Menu_images/tea.jpeg" alt="Tea" class="item-img">
-                    <h5 class="item-name">Tea</h5>
-                    <div class="item-price">₹20 / ₹10</div>
+            </div>
+
+            <!-- Shakes -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="shakes">Shakes</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/chocolateshake.jpg" alt="Chocolate Shake"
+                            class="item-img">
+                        <h5 class="item-name">Chocolate</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/kitkatshake.jpg" alt="KitKat Shake" class="item-img">
+                        <h5 class="item-name">KitKat</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/butterscotchshake.jpeg" alt="Butterscotch Shake"
+                            class="item-img">
+                        <h5 class="item-name">Butterscotch</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/blackcurrentshake.jpeg" alt="Black Current Shake"
+                            class="item-img">
+                        <h5 class="item-name">Black Current</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/oreoshake.jpeg" alt="Oreo Shake" class="item-img">
+                        <h5 class="item-name">Oreo</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/strawberryshake.jpeg" alt="Strawberry Shake"
+                            class="item-img">
+                        <h5 class="item-name">Strawberry</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/coldcoffee.jpeg" alt="Cold Coffee" class="item-img">
+                        <h5 class="item-name">Cold Coffee</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/mangoshake.jpeg" alt="Mango Shake" class="item-img">
+                        <h5 class="item-name">Mango</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Shakes -->
-        <div class="menu-category">
-            <h4 class="menu-title">Shakes</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/chocolateshake.jpg" alt="Chocolate Shake" class="item-img"><h5 class="item-name">Chocolate</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/kitkatshake.jpg" alt="KitKat Shake" class="item-img"><h5 class="item-name">KitKat</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/butterscotchshake.jpeg" alt="Butterscotch Shake" class="item-img"><h5 class="item-name">Butterscotch</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/blackcurrentshake.jpeg" alt="Black Current Shake" class="item-img"><h5 class="item-name">Black Current</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/oreoshake.jpeg" alt="Oreo Shake" class="item-img"><h5 class="item-name">Oreo</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/strawberryshake.jpeg" alt="Strawberry Shake" class="item-img"><h5 class="item-name">Strawberry</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/coldcoffee.jpeg" alt="Cold Coffee" class="item-img"><h5 class="item-name">Cold Coffee</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/mangoshake.jpeg" alt="Mango Shake" class="item-img"><h5 class="item-name">Mango</h5><div class="item-price">₹80</div></div>
+            <!-- Pizza -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="pizza">Pizza</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/babaspecialpizza.jpg" alt="Baba Special Pizza"
+                            class="item-img">
+                        <h5 class="item-name">Baba Special</h5>
+                        <div class="item-price">₹200</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/paneerpizza.jpg" alt="Paneer Pizza" class="item-img">
+                        <h5 class="item-name">Paneer Pizza</h5>
+                        <div class="item-price">₹180</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/vegloaded.jpg" alt="Veg Loaded Pizza" class="item-img">
+                        <h5 class="item-name">Veg Loaded</h5>
+                        <div class="item-price">₹170</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cornimg.webp" alt="Corn Pizza" class="item-img">
+                        <h5 class="item-name">Corn Pizza</h5>
+                        <div class="item-price">₹150</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/onioncap.jpg" alt="Onion Capsicum Pizza"
+                            class="item-img">
+                        <h5 class="item-name">Onion Capsicum</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                </div>
             </div>
-            <p class="item-desc" style="text-align: center; margin-top: 1rem;"><strong>Whole cream ₹20 extra</strong></p>
-        </div>
 
-        <!-- Pizza -->
-        <div class="menu-category">
-            <h4 class="menu-title">Pizza</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/babaspecialpizza.jpg" alt="Baba Special Pizza" class="item-img"><h5 class="item-name">Baba Special</h5><div class="item-price">₹200</div></div>
-                <div class="menu-item"><img src="Menu_images/paneerpizza.jpg" alt="Paneer Pizza" class="item-img"><h5 class="item-name">Paneer Pizza</h5><div class="item-price">₹180</div></div>
-                <div class="menu-item"><img src="Menu_images/vegloaded.jpg" alt="Veg Loaded Pizza" class="item-img"><h5 class="item-name">Veg Loaded</h5><div class="item-price">₹170</div></div>
-                <div class="menu-item"><img src="Menu_images/cornimg.webp" alt="Corn Pizza" class="item-img"><h5 class="item-name">Corn Pizza</h5><div class="item-price">₹150</div></div>
-                <div class="menu-item"><img src="Menu_images/onioncap.jpg" alt="Onion Capsicum Pizza" class="item-img"><h5 class="item-name">Onion Capsicum</h5><div class="item-price">₹120</div></div>
+            <!-- Noodles -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="noodles">Noodles</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/schezwannoodles.jpg" alt="Schezwan Noodles"
+                            class="item-img">
+                        <h5 class="item-name">Schezwan Noodles</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/hakanoodles.jpg" alt="Haka Noodles" class="item-img">
+                        <h5 class="item-name">Haka Noodles</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/chowmein.jpeg" alt="Chowmein" class="item-img">
+                        <h5 class="item-name">Chowmein</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Noodles -->
-        <div class="menu-category">
-            <h4 class="menu-title">Noodles</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/schezwannoodles.jpg" alt="Schezwan Noodles" class="item-img"><h5 class="item-name">Schezwan Noodles</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/hakanoodles.jpg" alt="Haka Noodles" class="item-img"><h5 class="item-name">Haka Noodles</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/chowmein.jpeg" alt="Chowmein" class="item-img"><h5 class="item-name">Chowmein</h5><div class="item-price">₹80</div></div>
+            <!-- Maggi -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="maggi">Maggi</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/cheesepannertandoorimaggi.jpeg"
+                            alt="Cheese Paneer Tandoori Maggi" class="item-img">
+                        <h5 class="item-name">Cheese Paneer Tandoori Maggi</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cheesetandoorimaggi.jpeg" alt="Cheese Tandoori Maggi"
+                            class="item-img">
+                        <h5 class="item-name">Cheese Tandoori</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cheesemaggi.jpg" alt="Cheese Maggi" class="item-img">
+                        <h5 class="item-name">Cheese Maggi</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/plainmaggi.jpeg" alt="Veg Maggi" class="item-img">
+                        <h5 class="item-name">Veg Maggi</h5>
+                        <div class="item-price">₹50</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Maggi -->
-        <div class="menu-category">
-            <h4 class="menu-title">Maggi</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/cheesepannertandoorimaggi.jpeg" alt="Cheese Paneer Tandoori Maggi" class="item-img"><h5 class="item-name">Cheese Paneer Tandoori Maggi</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/cheesetandoorimaggi.jpeg" alt="Cheese Tandoori Maggi" class="item-img"><h5 class="item-name">Cheese Tandoori</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/cheesemaggi.jpg" alt="Cheese Maggi" class="item-img"><h5 class="item-name">Cheese Maggi</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/plainmaggi.jpeg" alt="Veg Maggi" class="item-img"><h5 class="item-name">Veg Maggi</h5><div class="item-price">₹50</div></div>
+            <!-- Meals -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="meals">Meals</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/manchuriyan.jpeg" alt="Manchurian" class="item-img">
+                        <h5 class="item-name">Manchurian</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/paneerparantha.jpeg" alt="Paneer Parantha"
+                            class="item-img">
+                        <h5 class="item-name">Paneer Parantha</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cholabhatura.jpeg" alt="Chola Bhatura"
+                            class="item-img">
+                        <h5 class="item-name">Chola Bhatura</h5>
+                        <div class="item-price">₹80</div>
+                        <p class="item-desc">Extra Bhatura ₹20</p>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/pavbhaji.jpeg" alt="Pav Bhaji" class="item-img">
+                        <h5 class="item-name">Pav Bhaji</h5>
+                        <div class="item-price">₹80</div>
+                        <p class="item-desc">Extra Pav ₹10</p>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/alooParantha.jpeg" alt="Aloo Parantha"
+                            class="item-img">
+                        <h5 class="item-name">Aloo Parantha</h5>
+                        <div class="item-price">₹60</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cholakulcha.jpeg" alt="Chola Kulcha" class="item-img">
+                        <h5 class="item-name">Chola Kulcha</h5>
+                        <div class="item-price">₹60</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Meals -->
-        <div class="menu-category">
-            <h4 class="menu-title">Meals</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/manchuriyan.jpeg" alt="Manchurian" class="item-img"><h5 class="item-name">Manchurian</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/paneerparantha.jpeg" alt="Paneer Parantha" class="item-img"><h5 class="item-name">Paneer Parantha</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/cholabhatura.jpeg" alt="Chola Bhatura" class="item-img"><h5 class="item-name">Chola Bhatura</h5><div class="item-price">₹80</div><p class="item-desc">Extra Bhatura ₹20</p></div>
-                <div class="menu-item"><img src="Menu_images/pavbhaji.jpeg" alt="Pav Bhaji" class="item-img"><h5 class="item-name">Pav Bhaji</h5><div class="item-price">₹80</div><p class="item-desc">Extra Pav ₹10</p></div>
-                <div class="menu-item"><img src="Menu_images/alooParantha.jpeg" alt="Aloo Parantha" class="item-img"><h5 class="item-name">Aloo Parantha</h5><div class="item-price">₹60</div></div>
-                <div class="menu-item"><img src="Menu_images/cholakulcha.jpeg" alt="Chola Kulcha" class="item-img"><h5 class="item-name">Chola Kulcha</h5><div class="item-price">₹60</div></div>
+            <!-- Sandwiches -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="sandwiches">Sandwiches</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/clubsandwich.jpeg" alt="Club Sandwich"
+                            class="item-img">
+                        <h5 class="item-name">Club Sandwich</h5>
+                        <div class="item-price">₹120</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cheesepaneersandwich.jpeg" alt="Cheese Paneer Sandwich"
+                            class="item-img">
+                        <h5 class="item-name">Cheese Paneer</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cheesetoastsandwich.jpeg" alt="Cheese Toast"
+                            class="item-img">
+                        <h5 class="item-name">Cheese Toast</h5>
+                        <div class="item-price">₹70</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/toastsandwich.jpeg" alt="Toast Sandwich"
+                            class="item-img">
+                        <h5 class="item-name">Toast Sandwich</h5>
+                        <div class="item-price">₹50</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/vegsandwich.jpeg" alt="Veg Sandwich" class="item-img">
+                        <h5 class="item-name">Veg Sandwich</h5>
+                        <div class="item-price">₹40</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Sandwiches -->
-        <div class="menu-category">
-            <h4 class="menu-title">Sandwiches</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/clubsandwich.jpeg" alt="Club Sandwich" class="item-img"><h5 class="item-name">Club Sandwich</h5><div class="item-price">₹120</div></div>
-                <div class="menu-item"><img src="Menu_images/cheesepaneersandwich.jpeg" alt="Cheese Paneer Sandwich" class="item-img"><h5 class="item-name">Cheese Paneer</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/cheesetoastsandwich.jpeg" alt="Cheese Toast" class="item-img"><h5 class="item-name">Cheese Toast</h5><div class="item-price">₹70</div></div>
-                <div class="menu-item"><img src="Menu_images/toastsandwich.jpeg" alt="Toast Sandwich" class="item-img"><h5 class="item-name">Toast Sandwich</h5><div class="item-price">₹50</div></div>
-                <div class="menu-item"><img src="Menu_images/vegsandwich.jpeg" alt="Veg Sandwich" class="item-img"><h5 class="item-name">Veg Sandwich</h5><div class="item-price">₹40</div></div>
+            <!-- Burgers -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="burgers">Burgers</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/babaspecialburger.jpeg" alt="Baba Special Burger"
+                            class="item-img">
+                        <h5 class="item-name">Baba Special Burger</h5>
+                        <div class="item-price">₹60</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/burger.jpeg" alt="Veg Burger" class="item-img">
+                        <h5 class="item-name">Veg Burger</h5>
+                        <div class="item-price">₹30</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Burgers -->
-        <div class="menu-category">
-            <h4 class="menu-title">Burgers</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/babaspecialburger.jpeg" alt="Baba Special Burger" class="item-img"><h5 class="item-name">Baba Special Burger</h5><div class="item-price">₹60</div></div>
-                <div class="menu-item"><img src="Menu_images/burger.jpeg" alt="Veg Burger" class="item-img"><h5 class="item-name">Veg Burger</h5><div class="item-price">₹30</div></div>
+            <!-- Snacks -->
+            <div class="menu-category">
+                <h4 class="menu-title" id="snacks">Snacks</h4>
+                <div class="menu-items">
+                    <div class="menu-item"><img src="Menu_images/manchuriyan.jpeg" alt="Manchurian" class="item-img">
+                        <h5 class="item-name">Manchurian</h5>
+                        <div class="item-price">₹100</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/vegspringroll.jpeg" alt="Veg Spring Roll"
+                            class="item-img">
+                        <h5 class="item-name">Veg Spring Roll</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/momos.jpeg" alt="Momos" class="item-img">
+                        <h5 class="item-name">Momos</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/garlicbread.jpeg" alt="Garlic Bread" class="item-img">
+                        <h5 class="item-name">Garlic Bread</h5>
+                        <div class="item-price">₹80</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/cheeseball.jpeg" alt="Cheese Ball" class="item-img">
+                        <h5 class="item-name">Cheese Ball</h5>
+                        <div class="item-price">₹60</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/stix.jpeg" alt="Veg Stix" class="item-img">
+                        <h5 class="item-name">Veg Stix</h5>
+                        <div class="item-price">₹60</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/frenchfries.jpeg" alt="French Fries" class="item-img">
+                        <h5 class="item-name">French Fries</h5>
+                        <div class="item-price">₹50</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/poha.jpeg" alt="Poha" class="item-img">
+                        <h5 class="item-name">Poha</h5>
+                        <div class="item-price">₹40</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/bunmaska.jpeg" alt="Bun Maska" class="item-img">
+                        <h5 class="item-name">Bun Maska</h5>
+                        <div class="item-price">₹30</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/kachori.jpeg" alt="Kachori (Pyazz)" class="item-img">
+                        <h5 class="item-name">Kachori (Pyazz)</h5>
+                        <div class="item-price">₹30 / ₹20</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/samosa.jpeg" alt="Samosa" class="item-img">
+                        <h5 class="item-name">Samosa</h5>
+                        <div class="item-price">₹25 / ₹15</div>
+                    </div>
+                    <div class="menu-item"><img src="Menu_images/kachori(dal).jpeg" alt="Kachori (Dal)"
+                            class="item-img">
+                        <h5 class="item-name">Kachori (Dal)</h5>
+                        <div class="item-price">₹25 / ₹15</div>
+                    </div>
+                </div>
             </div>
-        </div>
 
-        <!-- Snacks -->
-        <div class="menu-category">
-            <h4 class="menu-title">Snacks</h4>
-            <div class="menu-items">
-                <div class="menu-item"><img src="Menu_images/manchuriyan.jpeg" alt="Manchurian" class="item-img"><h5 class="item-name">Manchurian</h5><div class="item-price">₹100</div></div>
-                <div class="menu-item"><img src="Menu_images/vegspringroll.jpeg" alt="Veg Spring Roll" class="item-img"><h5 class="item-name">Veg Spring Roll</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/momos.jpeg" alt="Momos" class="item-img"><h5 class="item-name">Momos</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/garlicbread.jpeg" alt="Garlic Bread" class="item-img"><h5 class="item-name">Garlic Bread</h5><div class="item-price">₹80</div></div>
-                <div class="menu-item"><img src="Menu_images/cheeseball.jpeg" alt="Cheese Ball" class="item-img"><h5 class="item-name">Cheese Ball</h5><div class="item-price">₹60</div></div>
-                <div class="menu-item"><img src="Menu_images/stix.jpeg" alt="Veg Stix" class="item-img"><h5 class="item-name">Veg Stix</h5><div class="item-price">₹60</div></div>
-                <div class="menu-item"><img src="Menu_images/frenchfries.jpeg" alt="French Fries" class="item-img"><h5 class="item-name">French Fries</h5><div class="item-price">₹50</div></div>
-                <div class="menu-item"><img src="Menu_images/poha.jpeg" alt="Poha" class="item-img"><h5 class="item-name">Poha</h5><div class="item-price">₹40</div></div>
-                <div class="menu-item"><img src="Menu_images/bunmaska.jpeg" alt="Bun Maska" class="item-img"><h5 class="item-name">Bun Maska</h5><div class="item-price">₹30</div></div>
-                <div class="menu-item"><img src="Menu_images/kachori.jpeg" alt="Kachori (Pyazz)" class="item-img"><h5 class="item-name">Kachori (Pyazz)</h5><div class="item-price">₹30 / ₹20</div></div>
-                <div class="menu-item"><img src="Menu_images/samosa.jpeg" alt="Samosa" class="item-img"><h5 class="item-name">Samosa</h5><div class="item-price">₹25 / ₹15</div></div>
-                <div class="menu-item"><img src="Menu_images/kachori(dal).jpeg" alt="Kachori (Dal)" class="item-img"><h5 class="item-name">Kachori (Dal)</h5><div class="item-price">₹25 / ₹15</div></div>
-            </div>
+            <p class="item-desc" style="margin-top: 4rem; font-style: italic;">Note: All items are subject to
+                availability</p>
         </div>
-
-        <p class="item-desc" style="margin-top: 4rem; font-style: italic;">Note: All items are subject to availability</p>
-    </div>
-</section>
+    </section>
 
 
     <!-- CONTACT SECTION -->
@@ -634,66 +856,66 @@
 
     <script>
         // Smooth cinematic parallax + zoom (Optimized)
-const parallaxBg = document.querySelector('.parallax-bg');
-let latestScroll = 0;
-let ticking = false;
+        const parallaxBg = document.querySelector('.parallax-bg');
+        let latestScroll = 0;
+        let ticking = false;
 
-function updateParallax() {
-    const offset = latestScroll * 0.4;
-    const zoom = 1 + latestScroll * 0.0003;
-    parallaxBg.style.transform = `translateY(${offset}px) scale(${zoom})`;
-    ticking = false;
-}
-
-function onScroll() {
-    latestScroll = window.scrollY;
-    if (!ticking) {
-        requestAnimationFrame(updateParallax);
-        ticking = true;
-    }
-}
-
-window.addEventListener('scroll', onScroll);
-onScroll(); // Initial call
-
-// Fully automated "View More" functionality
-document.addEventListener('DOMContentLoaded', () => {
-    const visibleCount = 3; // Number of items to show before hiding
-
-    document.querySelectorAll('.menu-items').forEach(grid => {
-        const allItems = Array.from(grid.querySelectorAll('.menu-item'));
-
-        if (allItems.length > visibleCount) {
-            // Create hidden items container
-            const hiddenItemsContainer = document.createElement('div');
-            hiddenItemsContainer.classList.add('hidden-items');
-
-            // Move extra items into hidden container
-            const extras = allItems.slice(visibleCount);
-            extras.forEach(item => hiddenItemsContainer.appendChild(item));
-
-            // Hide extras initially
-            hiddenItemsContainer.style.display = 'none';
-            grid.appendChild(hiddenItemsContainer);
-
-            // Create View More button
-            const buttonContainer = document.createElement('div');
-            buttonContainer.classList.add('view-more-container');
-            const button = document.createElement('button');
-            button.classList.add('btn-view-more');
-            button.textContent = 'View More';
-            buttonContainer.appendChild(button);
-            grid.appendChild(buttonContainer);
-
-            // Add click toggle
-            button.addEventListener('click', function () {
-                const isExpanded = hiddenItemsContainer.style.display === 'contents';
-                hiddenItemsContainer.style.display = isExpanded ? 'none' : 'contents';
-                this.textContent = isExpanded ? 'View More' : 'View Less';
-            });
+        function updateParallax() {
+            const offset = latestScroll * 0.4;
+            const zoom = 1 + latestScroll * 0.0003;
+            parallaxBg.style.transform = `translateY(${offset}px) scale(${zoom})`;
+            ticking = false;
         }
-    });
-});
+
+        function onScroll() {
+            latestScroll = window.scrollY;
+            if (!ticking) {
+                requestAnimationFrame(updateParallax);
+                ticking = true;
+            }
+        }
+
+        window.addEventListener('scroll', onScroll);
+        onScroll(); // Initial call
+
+        // Fully automated "View More" functionality
+        document.addEventListener('DOMContentLoaded', () => {
+            const visibleCount = 3; // Number of items to show before hiding
+
+            document.querySelectorAll('.menu-items').forEach(grid => {
+                const allItems = Array.from(grid.querySelectorAll('.menu-item'));
+
+                if (allItems.length > visibleCount) {
+                    // Create hidden items container
+                    const hiddenItemsContainer = document.createElement('div');
+                    hiddenItemsContainer.classList.add('hidden-items');
+
+                    // Move extra items into hidden container
+                    const extras = allItems.slice(visibleCount);
+                    extras.forEach(item => hiddenItemsContainer.appendChild(item));
+
+                    // Hide extras initially
+                    hiddenItemsContainer.style.display = 'none';
+                    grid.appendChild(hiddenItemsContainer);
+
+                    // Create View More button
+                    const buttonContainer = document.createElement('div');
+                    buttonContainer.classList.add('view-more-container');
+                    const button = document.createElement('button');
+                    button.classList.add('btn-view-more');
+                    button.textContent = 'View More';
+                    buttonContainer.appendChild(button);
+                    grid.appendChild(buttonContainer);
+
+                    // Add click toggle
+                    button.addEventListener('click', function () {
+                        const isExpanded = hiddenItemsContainer.style.display === 'contents';
+                        hiddenItemsContainer.style.display = isExpanded ? 'none' : 'contents';
+                        this.textContent = isExpanded ? 'View More' : 'View Less';
+                    });
+                }
+            });
+        });
 
     </script>
 </body>
