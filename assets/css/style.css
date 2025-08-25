@@ -182,11 +182,10 @@ body {
   font-size: var(--fontSize-body-4);
   font-weight: var(--weight-regular);
   line-height: var(--lineHeight-5);
-  overflow: hidden;
-  height: 300vh;
+  overflow-x: hidden;  /* Only hide horizontal scroll */
 }
+body.loaded { overflow-y: auto; }  /* Allow vertical scroll */
 
-body.loaded { overflow: overlay; }
 
 body.nav-active { overflow: hidden; }
 
@@ -527,7 +526,7 @@ body.nav-active { overflow: hidden; }
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: var(--gold-crayola);
+  background-color: var(--eerie-black-1); /* Same as body background */
   z-index: 10;
   display: grid;
   place-content: center;
@@ -541,8 +540,10 @@ body.nav-active { overflow: hidden; }
 
 .preload.loaded {
   transition-delay: 250ms;
-  transform: translateY(100%);
+  opacity: 0;
+  pointer-events: none;
 }
+
 
 .circle {
   width: 112px;

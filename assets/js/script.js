@@ -78,6 +78,13 @@ window.addEventListener("scroll", function () {
   }
 });
 
+const navLinks = document.querySelectorAll(".navbar-link");
+
+addEventOnElements(navLinks, "click", function () {
+  navbar.classList.remove("active");
+  overlay.classList.remove("active");
+  document.body.classList.remove("nav-active");
+});
 
 
 /**
